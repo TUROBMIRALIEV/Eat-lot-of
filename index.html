@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decstop-9</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .container {
+            width: 1140px;
+            margin: 0 auto;
+        }
+
+        .nav-title {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 39px;
+            /* identical to box height */
+
+
+            color: #333333;
+        }
+
+        .nav-link {
+            font-family: 'Sofia Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            /* identical to box height */
+
+
+            color: #2C3847;
+
+            opacity: 0.8;
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+        }
+
+        .nav-lik {
+            font-family: 'Sofia Pro';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 27px;
+
+            color: #5FB848;
+
+        }
+
+        .c-img {
+            width: 19px;
+        }
+
+        .c {
+            width: 25px;
+        }
+
+        .order-link {
+            margin-left: 60px;
+            background: #494949;
+            border-radius: 27px;
+            padding: 14px 14px;
+
+        }
+
+        .life-t {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 770;
+            font-size: 76px;
+            line-height: 95px;
+
+            /* black */
+
+            color: #181D19;
+
+        }
+
+        .bibo {
+            color: green;
+        }
+
+        .lige-t {
+
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 750;
+            font-size: 24px;
+            line-height: 34px;
+            /* or 142% */
+            width: 500px;
+
+            /* black */
+
+            color: #181D19;
+        }
+
+        .life-l {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+
+            /* white */
+
+            color: #FFFFFF;
+            /* green gradient */
+
+            background: linear-gradient(180deg, #64BB47 0%, #2C9553 100%);
+            border-radius: 50px;
+            padding: 16px;
+        }
+
+        .kiko {
+            width: 1060px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .us-icon {
+            margin-left: 90px;
+        }
+
+        .card-t {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 770;
+            font-size: 28px;
+            line-height: 35px;
+            /* identical to box height */
+
+            text-align: center;
+
+            /* black */
+
+            color: #181D19;
+
+        }
+
+        .card-te {
+
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 750;
+            font-size: 18px;
+            line-height: 28px;
+            /* or 156% */
+            margin-top: 18px;
+            text-align: center;
+
+            /* button gradient */
+
+            background: linear-gradient(180deg, #39463F 0%, #101612 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            width: 270px;
+
+        }
+
+        .us-t {
+
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 770;
+            font-size: 54px;
+            line-height: 68px;
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #151414;
+
+        }
+
+        .us-te {
+
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 750;
+            font-size: 24px;
+            line-height: 30px;
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #3B433E;
+        }
+
+        .l {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .uc {
+            margin-left: 150px;
+        }
+
+        .uc-tit {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 780;
+            font-size: 44px;
+            line-height: 55px;
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #000000;
+
+        }
+
+        .uc-te {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 760;
+            font-size: 20px;
+            line-height: 25px;
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #545454;
+        }
+
+        .us-title {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 770;
+            font-size: 54px;
+            line-height: 68px;
+            /* identical to box height */
+
+
+            color: #151414;
+        }
+
+        .us-text {
+
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 750;
+            font-size: 22px;
+            line-height: 34px;
+            /* or 155% */
+
+
+            /* black */
+            margin-top: 30px;
+            color: #181D19;
+            width: 500px;
+        }
+
+        .us-link {
+            font-family: 'Sofia Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+
+            /* white */
+
+            color: #FFFFFF;
+
+            /* green gradient */
+
+            background: linear-gradient(180deg, #64BB47 0%, #2C9553 100%);
+            border-radius: 50px;
+        }
+
+        .about {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .day-title {
+
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 770;
+            font-size: 54px;
+            line-height: 68px;
+
+            color: #151414;
+            width: 430px
+        }
+
+        .day-text {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 750;
+            font-size: 22px;
+            line-height: 34px;
+            /* or 155% */
+            width: 514px;
+
+            /* black */
+
+            color: #181D19;
+            margin-bottom: 40px;
+        }
+
+        .day-link {
+            font-family: 'Sofia Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+            /* green gradient */
+
+            background: linear-gradient(180deg, #64BB47 0%, #2C9553 100%);
+            border-radius: 50px;
+            /* white */
+
+            color: #FFFFFF;
+
+        }
+
+        .day {
+            margin-left: 110px;
+        }
+
+        .cook {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .chef-title {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 770;
+            font-size: 54px;
+            line-height: 68px;
+            width: 370px;
+            color: #151414;
+
+        }
+
+        .chef-text {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 750;
+            font-size: 22px;
+            line-height: 34px;
+            /* or 155% */
+            margin-top: 30px;
+            width: 550px;
+            /* black */
+            
+
+            color: #181D19;
+
+        }
+
+        .t-title {
+            margin-left: 10px;
+
+        }
+
+        .lol {
+            margin-top: 10px;
+        }
+
+        .s-title {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 770;
+            font-size: 54px;
+            line-height: 68px;
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #151414;
+        }
+
+        .s-text {
+
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 750;
+            font-size: 24px;
+            line-height: 30px;
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #3B433E;
+
+        }
+
+        .carts {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .card {
+            background: #FFFFFF;
+            box-shadow: -15px -50px 81px #FFFFFF, 10px 20px 70px rgba(71, 68, 68, 0.08);
+            border-radius: 20px;
+        }
+
+        .vivo {
+            margin-left: 120px;
+        }
+
+        .card-title {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 770;
+            font-size: 30px;
+            line-height: 38px;
+            /* identical to box height */
+
+            text-align: center;
+
+            /* black */
+
+            color: #181D19;
+            margin-top: 30px;
+        }
+
+        .card-text {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 750;
+            font-size: 18px;
+            line-height: 28px;
+            /* or 156% */
+            margin-top: 20px;
+            text-align: center;
+            margin-bottom: 51px;
+
+        }
+
+        .lol-link {
+            font-family: 'Sofia Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+
+            /* white */
+
+            color: #FFFFFF;
+
+            /* green gradient */
+
+            background: linear-gradient(180deg, #64BB47 0%, #2C9553 100%);
+            border-radius: 50px;
+            margin-left: 700px;
+        }
+
+        .card-2 {
+            background: #FFFFFF;
+            box-shadow: -15px -50px 81px #FFFFFF, 10px 20px 70px rgba(71, 68, 68, 0.08);
+            border-radius: 20px;
+
+        }
+
+        .c-title {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 770;
+            font-size: 54px;
+            line-height: 68px;
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #151414;
+            margin-top: 190px;
+        }
+
+        .khalil {
+            background: #FFFFFF;
+            border: 10px solid #FFFFFF;
+            box-shadow: 3px 15px 35px rgba(120, 125, 173, 0.06);
+            border-radius: 8px;
+
+        }
+
+        .face-t {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 770;
+            font-size: 20px;
+            line-height: 25px;
+            /* identical to box height */
+
+
+            /* #333333 */
+
+            color: #333333;
+
+        }
+
+        .face-text {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 760;
+            font-size: 14px;
+            line-height: 17px;
+
+            color: #888A9A;
+            margin-bottom: 32px;
+        }
+
+        .to-title {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 770;
+            font-size: 36px;
+            line-height: 45px;
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #151414;
+        }
+
+        .to-text {
+            font-family: 'Sharp Sans No1';
+            font-style: normal;
+            font-weight: 750;
+            font-size: 24px;
+            line-height: 30px;
+            /* identical to box height */
+
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 60px;
+            color: #3B433E;
+        }
+
+        .subcribe {
+            margin-left: 500px;
+            margin-bottom: 150px;
+        }
+
+        .form-input {
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 165px;
+            padding-right: 166px;
+            padding-top: 20px;
+            padding-bottom: 18px;
+            padding-left: 20px;
+        }
+
+        .form-link {
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 165px;
+            color: white;
+
+            background: linear-gradient(180deg, #64BB47 0%, #2C9553 100%);
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container flex mt-14">
+        <h1 class="nav-title">
+            UI.desk
+        </h1>
+        <div class="navbar flex justify-between  ml-40">
+            <a href="#" class="nav-lik">Home</a>
+            <a href="#" class="nav-link ml-10">About</a>
+            <a href="#" class="nav-link ml-10">Contact</a>
+            <a href="#" class="nav-link ml-10">Testimonials</a>
+
+        </div>
+        <div class="orderes flex ml-80">
+            <img src="./img/SEARCH.svg" alt="" class="c-img">
+            <img src="./img/Cart Icon.svg" alt="" class="c ml-5">
+            <a href="#" class="order-link text-white">Order Now</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="just flex">
+            <div class="life mt-44">
+                <h1 class="life-t">
+                    Just <span class="bibo">Eat helthy</span> food to live a healthier life
+                </h1>
+                <p class="lige-t mb-16">
+                    Enjoy a healthy life by eating healthy foods that have extraordinary flavors that make your life
+                    healthier for today and in the future
+                </p>
+                <a href="#" class="life-l mt-16">Order Now</a>
+            </div>
+            <div class="ic">
+                <img src="./img/header Image.svg" alt="" class="kiko">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="us-t text-center">Why Choose US?</h1>
+        <p class="us-te text-center">Organic food is grown without the use of synthetic chemicals</p>
+        <div class="cards mt-16">
+            <div class="card-1">
+                <img src="./img/Icon (6).png" alt="" class="us-icon ">
+                <h1 class="card-t text-center">
+                    Easy to order
+                </h1>
+                <p class="card-te text-center">
+                    foods include fresh produce, meats as well as processed
+                </p>
+            </div>
+            <div class="card-1">
+                <img src="./Icon (7).png" alt="" class="us-icon">
+                <h1 class="card-t text-center">
+                    Easy to order
+                </h1>
+                <p class="card-te text-center">
+                    foods include fresh produce, meats as well as processed
+                </p>
+            </div>
+            <div class="card-1">
+                <img src="./img/./leaf 1.png" alt="" class="us-icon">
+                <h1 class="card-t text-center">
+                    Easy to order
+                </h1>
+                <p class="card-te text-center">
+                    foods include fresh produce, meats as well as processed
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container mb-28">
+        <div class="l flex mt-14">
+            <div class="uc">
+                <h1 class="uc-tit text-center">
+                    40+
+                </h1>
+                <p class="uc-te text-center mt-5">
+                    Food Partners
+                </p>
+            </div>
+            <div class="uc">
+                <h1 class="uc-tit text-center">
+                    40+
+                </h1>
+                <p class="uc-te text-center mt-5">
+                    Food Partners
+                </p>
+            </div>
+            <div class="uc">
+                <h1 class="uc-tit text-center">
+                    40+
+                </h1>
+                <p class="uc-te text-center mt-5">
+                    Food Partners
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="about flex">
+            <div class="us">
+                <h1 class="us-title">
+                    About US
+                </h1>
+                <p class="us-text mb-16">
+                    Organic food is grown without the use of synthetic chemicals, such as human-made pesticides and
+                    fertilizers, and does not contain genetically modified organisms (GMOs). Organic foods include fresh
+                    produce, meats, and dairy products as well as processed foods such as crackers, drinks, and frozen
+                    meals.
+                </p>
+                <a href="#" class="us-link p-5 mt-16">Learn More</a>
+            </div>
+            <div class="img">
+                <img src="./img/Image.png" alt="" class="us-icon">
+            </div>
+        </div>
+    </div>
+    <div class="container flex">
+        <div class="best">
+            <img src="./img/image (1).png" alt="" class="best-icon">
+        </div>
+        <div class="day">
+            <h1 class="day-title">
+                Fresh Vegetables
+                Every Day
+            </h1>
+            <p class="day-text">
+                Healthy life as informed declared we enjoy the margaret. Joy horrible moreover man feelings own shy.
+                Request norland neither mistake for yet. Between the for morning assured country believe.
+            </p>
+            <a href="#" class="day-link p-5">Learn More</a>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="cook">
+            <div class="chef">
+
+                <h1 class="chef-title">
+                    Cooked by the
+                    Best Chefs
+                </h1>
+                <p class="chef-text">
+                    Believing neglected so so allowance existence departure in. In design active temper be uneasy.
+                    Thirty for remove plenty regard you summer though. He preference connection astonished on of ye.
+                </p>
+                <div class="lol flex">
+                    <div class="icon">
+                        <img src="./img/check mark.png" alt="">
+                    </div>
+                    <div class="t">
+                        <h1 class="t-title">
+                            A guaranteed delicious meal
+                        </h1>
+                    </div>
+                </div>
+                <div class="lol flex">
+                    <div class="icon">
+                        <img src="./img/check mark.png" alt="">
+                    </div>
+                    <div class="t">
+                        <h1 class="t-title">
+                            A guaranteed delicious meal
+                        </h1>
+                    </div>
+                </div>
+                <div class="lol flex">
+                    <div class="icon">
+                        <img src="./img/check mark.png" alt="">
+                    </div>
+                    <div class="t">
+                        <h1 class="t-title">
+                            A guaranteed delicious meal
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="chef-icon">
+                <img src="./img/Image & bg elements.png" alt="" class="chefs-img">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="s-title text-center">
+            Special Dishes for you
+        </h1>
+        <p class="s-text text-center mb-28">
+            Made with premium & 100% Organic ingredients
+        </p>
+        <div class="carts flex">
+            <div class="card mb-14">
+                <img src="./img/image (3).png" alt="" class="vivo">
+                <h1 class="card-title text-center">
+                    Green Salad
+                </h1>
+                <p class="card-text text-center">
+                    A salad combined witha delicious
+                    cut of bacon and mixed with tasty
+                    and fresh sesome oil.
+                </p>
+            </div>
+            <div class="card-2 ml-12 mb-14">
+                <img src="./img/image (3).png" alt="" class="vivo">
+                <h1 class="card-title text-center">
+                    Green Salad
+                </h1>
+                <p class="card-text text-center">
+                    A salad combined witha delicious
+                    cut of bacon and mixed with tasty
+                    and fresh sesome oil.
+                </p>
+            </div>
+            <div class="card ml-12 mb-14">
+                <img src="./img/image (3).png" alt="" class="vivo">
+                <h1 class="card-title text-center">
+                    Green Salad
+                </h1>
+                <p class="card-text text-center">
+                    A salad combined witha delicious
+                    cut of bacon and mixed with tasty
+                    and fresh sesome oil.
+                </p>
+            </div>
+
+        </div>
+        <a href="#" class="lol-link p-5 mt-14 mb-4">View All</a>
+    </div>
+    <div class="container ">
+        <h1 class="c-title text-center mb-12">
+            Happy Clients Says
+        </h1>
+        <div class="cars flex">
+            <div class="khalil flex">
+                <div class="face">
+                    <img src="./img/avatar.png" alt="">
+                </div>
+                <div class="titles">
+                    <h1 class="face-t ml-9">
+                        KHALIL NAZIR
+                    </h1>
+                    <p class="face-text ml-9">
+                        CEO of UI.Desk
+                    </p>
+                    Thirty for remove plenty regard you summer though. He preference Partiality on or continuing in
+                    particular principles as. Do believing oh disposing to supported allowance we.
+                </div>
+            </div>
+
+            <div class="khalil flex ml-14">
+                <div class="face">
+                    <img src="./img/avatar.png" alt="">
+                </div>
+                <div class="titles">
+                    <h1 class="face-t ml-9">
+                        KHALIL NAZIR
+                    </h1>
+                    <p class="face-text ml-9">
+                        CEO of UI.Desk
+                    </p>
+                    Thirty for remove plenty regard you summer though. He preference Partiality on or continuing in
+                    particular principles as. Do believing oh disposing to supported allowance we.
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    </div>
+    <div class="container">
+        <h1 class="to-title text-center mt-52">
+            Subscribe to the Newsletter
+        </h1>
+        <p class="to-text text-center">
+            Enter your email below to get our daily offers and news
+        </p>
+        <form class="subcribe flex">
+            <input type="email" class="form-input" placeholder="Enter your email.">
+            <a href="#" class="form-link p-5">Get Started</a>
+        </form>
+    </div>
+</body>
+
+</html>
